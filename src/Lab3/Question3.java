@@ -1,7 +1,8 @@
+/*Write a program that inputs temperature in degrees Celsius and prints out the temperature in
+  degrees Fahrenheit. The formula to convert degrees Celsius to equivalent degrees Fahrenheit is
+  Fahrenheit = 1.8 * Celsius + 32 */
 package Lab3;
-
 import java.util.Scanner;
-
 public class Question3 {
     public static void main(String[] args) {
         Scanner key = new Scanner(System.in);

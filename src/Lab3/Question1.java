@@ -1,5 +1,4 @@
 package Lab3;
-
 public class Question1 {
     public static void main(String[] args) {
         double A=1,B=1,C=1,X=1,Y=1,R=1;

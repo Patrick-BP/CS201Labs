@@ -1,8 +1,6 @@
+//Write a program to convert centimeters (input) to feet and inches (output). 1 in = 2.54 cm
 package Lab3;
-
-import java.sql.SQLOutput;
 import java.util.Scanner;
-
 public class Question2 {
     public static void main(String[] args) {
 
