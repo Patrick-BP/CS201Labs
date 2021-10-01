@@ -12,7 +12,5 @@ public class WeightConverter {
         double weight = x * this.gravity;
         return weight;
     }
-//    public void printWeight(){
-//        System.out.println("your weight is: " );
-//    }
+
 }
