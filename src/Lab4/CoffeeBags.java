@@ -13,8 +13,8 @@ public CoffeeBags(double unitWeight, int numberOfBagsSold){
     this.numberOfBagsSold = numberOfBagsSold;
 }
 public double totalPrice(){
-    double totalPrice = this.unitWeight * this.numberOfBagsSold * this.PRICE_PER_POUND;
-    double totalPriceWithTax = totalPrice + totalPrice * this.TAX_RATE;
+    double totalPrice = this.unitWeight * this.numberOfBagsSold * CoffeeBags.PRICE_PER_POUND;
+    double totalPriceWithTax = totalPrice + totalPrice * CoffeeBags.TAX_RATE;
     //totalPriceWithTax = Math.rou;
 
     return totalPriceWithTax;
@@ -23,8 +23,8 @@ public void printTotalPrice(){
     DecimalFormat df = new DecimalFormat("###.##");
     System.out.println("Number of bags sold: " + this.numberOfBagsSold);
     System.out.println("Weight per bag: " + this.unitWeight+ " lb");
-    System.out.println("Price per pound: " + this.PRICE_PER_POUND+ " $");
-    System.out.println("Sales tax: " + this.TAX_RATE*100+ " %");
+    System.out.println("Price per pound: " + CoffeeBags.PRICE_PER_POUND+ " $");
+    System.out.println("Sales tax: " + CoffeeBags.TAX_RATE*100+ " %");
     System.out.println("Total price: " + df.format(this.totalPrice())+ " $");
 }
 }

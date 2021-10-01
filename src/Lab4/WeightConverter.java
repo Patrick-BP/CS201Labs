@@ -8,6 +8,7 @@ public class WeightConverter {
     public WeightConverter(double gravity){
         this.gravity = gravity;
     }
+
     public double convert(double x){
         double weight = x * this.gravity;
         return weight;
