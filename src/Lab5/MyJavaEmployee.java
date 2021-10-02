@@ -6,6 +6,8 @@ public class MyJavaEmployee {
     private  double numberOfHours;
     private double totalSales;
 
+    public MyJavaEmployee() {}
+
     public MyJavaEmployee(double numberOfHours, double totalSales) {
         this.numberOfHours = numberOfHours;
         this.totalSales = totalSales;
@@ -30,34 +32,29 @@ public class MyJavaEmployee {
     public void wage(){
         if(numberOfHours<=8) {
              wage = numberOfHours * BASIC_HOURLY_WAGE;
-
-            if(this.totalSales > 1 && this.totalSales<99.99) {
-                wage += (totalSales*0.05);
-
-            }
-            else if(this.totalSales >=100 && this.totalSales <=299.99){
-                wage += (this.totalSales*0.1);
-            }
-            else {
-                wage += (this.totalSales*0.15);
-            }
+            System.out.println("Wage no over time and no commission " +wage +" $");
         }
         else{
-           double overTime = (numberOfHours - 8 ) * OVERTIME_RATE;
-           wage = ( 8 * BASIC_HOURLY_WAGE) + overTime;
+            wage = ( 8 * BASIC_HOURLY_WAGE);
+            System.out.println("Wage  = " +wage+" $");
+            double overTime = (numberOfHours - 8 ) * (OVERTIME_RATE * BASIC_HOURLY_WAGE);
+            System.out.println("Overtime = " + overTime +" $");
 
-            if( this.totalSales > 1 && this.totalSales < 99.99) {
-                wage += (this.totalSales*0.05);
-            }
-            else if(this.totalSales >=100 && this.totalSales <=299.99){
-                wage += (totalSales*0.1);
-            }
-            else {
-                wage += (this.totalSales*0.15);
-            }
-
-
-
+            wage +=  overTime;
+            System.out.println("Wage + overtime = " +wage+" $");
         }
+        if( this.totalSales > 1 && this.totalSales < 99.99) {
+            wage += (this.totalSales*0.05);
+            System.out.println("Wage + 5% commission  = "+wage +" $");
+        }
+        else if(this.totalSales >=100 && this.totalSales <=299.99){
+            wage += (totalSales*0.1);
+            System.out.println("Wage + 10% commission  = " + wage +" $");
+        }
+        else {
+            wage += (this.totalSales*0.15);
+            System.out.println("Wage + 15% commission  =  " +wage +" $");
+        }
+        System.out.println("\nFinal wage "+wage +" $");
     }
 }
