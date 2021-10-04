@@ -3,8 +3,10 @@ package Lab5;
 public class MyJavaEmployee {
     private final double BASIC_HOURLY_WAGE = 7.25;
     private final double OVERTIME_RATE = 1.5;
+    private final int REGULAR_WORKING_HOURS = 40;
     private  double numberOfHours;
     private double totalSales;
+
 
     public MyJavaEmployee() {}
 
@@ -30,14 +32,14 @@ public class MyJavaEmployee {
     }
     double wage;
     public void wage(){
-        if(numberOfHours<=8) {
+        if(numberOfHours <= REGULAR_WORKING_HOURS) {
              wage = numberOfHours * BASIC_HOURLY_WAGE;
             System.out.println("Wage no over time and no commission " +wage +" $");
         }
         else{
-            wage = ( 8 * BASIC_HOURLY_WAGE);
+            wage = ( REGULAR_WORKING_HOURS * BASIC_HOURLY_WAGE);
             System.out.println("Wage  = " +wage+" $");
-            double overTime = (numberOfHours - 8 ) * (OVERTIME_RATE * BASIC_HOURLY_WAGE);
+            double overTime = (numberOfHours - REGULAR_WORKING_HOURS ) * (OVERTIME_RATE * BASIC_HOURLY_WAGE);
             System.out.println("Overtime = " + overTime +" $");
 
             wage +=  overTime;
