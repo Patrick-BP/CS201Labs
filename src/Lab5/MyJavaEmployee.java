@@ -31,9 +31,10 @@ public class MyJavaEmployee {
         this.totalSales = totalSales;
     }
     double wage;
+
     public void wage(){
         if(numberOfHours <= REGULAR_WORKING_HOURS) {
-             wage = numberOfHours * BASIC_HOURLY_WAGE;
+             wage = numberOfHours * BASIC_HOURLY_WAGE; //wage = 300$
             System.out.println("Wage no over time and no commission " +wage +" $");
         }
         else{
@@ -45,6 +46,7 @@ public class MyJavaEmployee {
             wage +=  overTime;
             System.out.println("Wage + overtime = " +wage+" $");
         }
+
         if( this.totalSales > 1 && this.totalSales < 99.99) {
             wage += (this.totalSales*0.05);
             System.out.println("Wage + 5% commission  = "+wage +" $");
