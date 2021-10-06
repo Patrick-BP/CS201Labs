@@ -4,7 +4,7 @@ package Lab7;
 *  c) missing incrementation of the loop and initialization
 *  d) missing incrementation of the loop and initialization
 * */
-public class Lab7 {
+public class Question1And2 {
 
     public static void main(String[] args) {
         System.out.println("A");
