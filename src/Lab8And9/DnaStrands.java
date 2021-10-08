@@ -4,6 +4,7 @@ import java.util.Scanner;
 
 public class DnaStrands {
     public static void main(String[] args) {
+
         Scanner key = new Scanner(System.in);
         do{
             System.out.println("Enter a DNA Strand");
