@@ -12,10 +12,14 @@ public class DnaStrands {
             if(input.isEmpty()) break;
             String newStrand= "";
             for (int i=0; i<input.length(); i++){
-                if(input.charAt(i) == 'T') newStrand += "A";
-                if(input.charAt(i) == 'G') newStrand += "C";
-                if(input.charAt(i) == 'A') newStrand += "T";
-                if(input.charAt(i) == 'C') newStrand += "G";
+                if(input.charAt(i) == 'T')
+                    newStrand += "A";
+                if(input.charAt(i) == 'G')
+                    newStrand += "C";
+                if(input.charAt(i) == 'A')
+                    newStrand += "T";
+                if(input.charAt(i) == 'C')
+                    newStrand += "G";
 
             }
             System.out.println(newStrand);
