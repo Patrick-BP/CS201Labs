@@ -5,7 +5,7 @@ import java.util.Random;
 
 public class Question1 {
     public static void main(String[] args) {
-        double[] temps = new double[365];
+        double[] temps = new double[364];
         int[] months = {31,28,31,30,31,30,31,30,31,30,31,30};
         Random rand = new Random();
         int temp =0;
@@ -13,9 +13,9 @@ public class Question1 {
         for (int k = 0; k < months.length; k++) {
 
         for (int i = temp; i <= months[k]; i++) {
-            temps[i] = rand.nextInt(31)-10;
-
-        }temp += months[k];
+            temps[i+temp] = rand.nextInt(111)-5;
+            temp += i;
+        }
 
         }
         System.out.println(Arrays.toString(temps));
